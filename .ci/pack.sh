@@ -38,8 +38,7 @@ function pack_artifacts() {
         ARCHIVE_FULL_NAME="$ARCHIVE_NAME.zip"
         powershell Compress-Archive "$REV_NAME" "$ARCHIVE_FULL_NAME"
     elif [ "$OS" = "android" ]; then
-        ARCHIVE_FULL_NAME="$ARCHIVE_NAME.zip"
-        zip -r "$ARCHIVE_FULL_NAME" "$REV_NAME"
+        ARCHIVE_FULL_NAME="$ARCHIVE_NAME"
     else
         ARCHIVE_FULL_NAME="$ARCHIVE_NAME.tar.gz"
         tar czvf "$ARCHIVE_FULL_NAME" "$REV_NAME"
